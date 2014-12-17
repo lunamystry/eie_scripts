@@ -13,7 +13,7 @@ VERSION="0.1.0"
 
 function usage
 {
-    echo "Usage: ${PROGNAME} [ubuntu | suse] [master | minion] [-h | --help]"
+    echo "Usage: ${PROGNAME} [ubuntu | sles] [master | minion] [-h | --help]"
 }
 
 function showhelp
@@ -131,6 +131,8 @@ elif [ "$1" = "suse" ]; then
     suse $2
 elif [ "$1" = "ubuntu" ]; then
     ubuntu $2
+elif [ "$1" = "" ]; then
+     usage
 fi
 
 while getopts ":h" opt; do
