@@ -111,7 +111,7 @@ function sles
 
         sudo zypper install salt-minion
         sudo chkconfig salt-minion on
-        sudo rcsalt-master start
+        sudo rcsalt-minion start
     else
         usage
     fi
