@@ -54,7 +54,7 @@ function sles
         proxy=$http$default_proxy
     fi
     proxy_config_template='suse_proxy.template'
-    proxy_config='output.file'
+    proxy_config='/etc/sysconfig/proxy'
 
     while read LINE; do
       echo $LINE |
@@ -88,7 +88,7 @@ function sles
 
         minion_config_template='minion.template'
         minion_config_intermediate='minion_intermediate.file'
-        minion_config='minion_output.file'
+        minion_config='/etc/salt/minion'
         while read LINE; do
             echo $LINE |
             sed "s/{{ id }}/"$id"/g" >> $minion_config_intermediate
