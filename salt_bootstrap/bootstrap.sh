@@ -86,6 +86,8 @@ function sles
             id=$default_id
         fi
 
+        sudo zypper install salt-minion
+
         minion_config_template='minion.template'
         minion_config_intermediate='minion_intermediate.file'
         minion_config='/etc/salt/minion'
@@ -109,7 +111,6 @@ function sles
         echo -e "\t removed $minion_config_intermediate"
         rm $minion_config_intermediate
 
-        sudo zypper install salt-minion
         sudo chkconfig salt-minion on
         sudo rcsalt-minion start
     else
