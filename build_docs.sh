@@ -11,6 +11,9 @@ compile_docs ()
     cd $MAKE_DIR
     make html
     cd $cur_dir
+    WID=`xdotool search --title "Mozilla Firefox" | head -1`
+    xdotool windowactivate $WID
+    xdotool key F5
 }
 
 while true; do
