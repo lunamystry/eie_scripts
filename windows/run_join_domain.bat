@@ -1,0 +1,1 @@
+powershell.exe -command "& 'C:\\Users\dlabadmin\Scripts\join_domain.ps1'"
